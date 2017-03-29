@@ -15,10 +15,10 @@ $classes= htmlentities($_POST['class']);
  $dao->save($name,$email,$availability,$comment,$classes);
 
 
+header("Location:participate.php");
 
 
 
-header("Location:search.php");
 
 end;
 
