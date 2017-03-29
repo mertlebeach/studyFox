@@ -1,19 +1,10 @@
 <?php
- 
-class Dao {
-private $host = "us-cdbr-iron-east-03.cleardb.net";
-private $db = "heroku_859fd3a9fcdab04";
-private $user = "bdd21646e8463c";
-private $pass = "085f2cbe";
-    
-    
-    
-    
-public function getConnection () {
-return
-new PDO("mysql:host={$this->host};dbname={$this->db}"
-}
-    
+
+class Dao{
+      private $host = "us-cdbr-iron-east-03.cleardb.net";
+      private $db = "heroku_859fd3a9fcdab04";
+      private $user = "bdd21646e8463c";
+      private $pass = "085f2cbe";
     
     public function getConnection () {
         
