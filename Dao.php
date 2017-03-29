@@ -1,10 +1,14 @@
 <?php
 
 class Dao{
-      private $host = "us-cdbr-iron-east-03.cleardb.net";
-      private $db = "heroku_859fd3a9fcdab04";
-      private $user = "bdd21646e8463c";
-      private $pass = "085f2cbe";
+ $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+$server = $url["host"];
+$username = $url["user"];
+$password = $url["pass"];
+$db = substr($url["path"], 1);
+
+$conn = new mysqli($server, $username, $password, $db);
     
     public function getConnection () {
         
